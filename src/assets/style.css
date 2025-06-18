@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  background: #003366;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.services, .contact {
+  padding: 2rem;
+}
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+}
