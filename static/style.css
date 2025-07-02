@@ -38,3 +38,43 @@ body {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 2px solid #ccc;
+  padding: 1rem 0;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  height: 50px;
+}
+.nav-links a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #002244;
+  font-weight: bold;
+}
+.call-now {
+  background: #FFD700;
+  padding: 0.5rem 1rem;
+  color: #002244;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: inline-block;
+  }
+}
