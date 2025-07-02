@@ -1,7 +1,7 @@
 {
-  "name": "flood-qrf-site",
+  "name": "floodqrfnew",
   "version": "1.0.0",
-  "description": "Flood QRF static site built with Eleventy",
+  "description": "Flood QRF static site with Eleventy",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
