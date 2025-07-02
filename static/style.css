@@ -1,0 +1,40 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  text-align: center;
+  background: #002244;
+  color: #fff;
+  padding: 2rem;
+}
+.cta-button {
+  background: #FFD700;
+  padding: 1rem 2rem;
+  color: #002244;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.services, .coverage {
+  padding: 2rem;
+  text-align: center;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.service {
+  width: 200px;
+}
+.footer {
+  background: #002244;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
