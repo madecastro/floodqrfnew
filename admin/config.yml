@@ -1,20 +1,2 @@
 backend:
   name: git-gateway
-  branch: main
-
-media_folder: "static/uploads"
-public_folder: "/static/uploads"
-
-collections:
-  - name: "site"
-    label: "Site Content"
-    files:
-      - label: "Home Page"
-        name: "homepage"
-        file: "index.njk"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Hero Text", name: "hero_text", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Call to Action Text", name: "cta_text", widget: "string" }
-          - { label: "Jobber Link", name: "jobber_link", widget: "string" }
