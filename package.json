@@ -1,11 +1,12 @@
 {
   "name": "flood-qrf-site",
   "version": "1.0.0",
+  "description": "Flood QRF static site built with Eleventy",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^2.0.0"
   }
 }
