@@ -1,57 +1,71 @@
 
 body {
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #111;
   margin: 0;
   padding: 0;
 }
+
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #002b45;
-  color: white;
   padding: 1rem;
 }
-nav a {
+
+header nav a {
   color: white;
-  margin-right: 10px;
+  margin: 0 0.5rem;
   text-decoration: none;
-}
-.call-link.desktop { display: inline; }
-.call-link.mobile { display: none; }
-@media (max-width: 600px) {
-  .call-link.desktop { display: none; }
-  .call-link.mobile { display: inline; }
+  font-weight: bold;
 }
 
 .hero {
+  position: relative;
   text-align: center;
-  padding: 2rem;
   background: #f2f2f2;
+  padding: 2rem;
 }
+
 .hero img {
   max-width: 100%;
   height: auto;
 }
-.services {
-  padding: 2rem;
+
+.hero h1, .hero p {
+  margin: 1rem 0;
 }
+
+.services, .coverage, .cta {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
 .service-icons {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0;
 }
+
 .service-icons li {
   text-align: center;
   margin: 1rem;
   max-width: 200px;
 }
-.coverage, .cta {
-  padding: 2rem;
-  text-align: center;
-}
+
 .cta-button {
   background: #002b45;
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f2f2f2;
 }

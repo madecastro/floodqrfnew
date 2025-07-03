@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <img src="/static/logo.png" alt="Flood QRF Logo" style="height: 60px;">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/sitemap.xml">Sitemap</a>
+      <a href="tel:9493243565">Call Now</a>
+    </nav>
+  </header>
+  {{ content | safe }}
+  <footer>
+    Flood QRF Inc. | (949) 324-3565 | License #XXXXXX
+  </footer>
+</body>
+</html>
