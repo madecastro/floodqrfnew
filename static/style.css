@@ -20,3 +20,38 @@ nav a {
   .call-link.desktop { display: none; }
   .call-link.mobile { display: inline; }
 }
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: #f2f2f2;
+}
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+.services {
+  padding: 2rem;
+}
+.service-icons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.service-icons li {
+  text-align: center;
+  margin: 1rem;
+  max-width: 200px;
+}
+.coverage, .cta {
+  padding: 2rem;
+  text-align: center;
+}
+.cta-button {
+  background: #002b45;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+}
