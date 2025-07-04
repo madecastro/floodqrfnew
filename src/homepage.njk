@@ -1,43 +1,41 @@
 ---
 layout: layout.njk
-title: "{{ title }}"
-permalink: "/"
+title: {{ title }}
 ---
 
-<section class="relative bg-cover bg-center" style="background-image: url('/images/hero.png')">
-  <div class="bg-black bg-opacity-50 py-12 px-4 text-center text-white">
-    <h1 class="text-4xl font-bold mb-4">{{ hero.heading }}</h1>
-    <p class="text-lg">{{ hero.subheading }}</p>
+<section class="relative bg-cover bg-center" style="background-image: url('/images/hero.jpg')">
+  <div class="bg-black bg-opacity-50 py-16 px-4 text-center text-white">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">{{ hero.heading }}</h1>
+    <p class="text-xl md:text-2xl text-gray-200">{{ hero.subheading }}</p>
   </div>
 </section>
 
-
-<section class="py-12 bg-gray-50">
+<section class="py-16 bg-gray-50">
   <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-2xl font-semibold mb-8">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <h2 class="text-3xl font-semibold mb-10">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-12">
       {% for service in services %}
         <div class="flex flex-col items-center">
-          {% if service.icon %}<img src="{{ service.icon }}" alt="{{ service.title }} Icon" class="h-16 mb-4" />{% endif %}
-          <h3 class="font-bold text-lg">{{ service.title }}</h3>
-          <p class="text-sm text-gray-600 mt-2">{{ service.description }}</p>
+          {% if service.icon %}<img src="{{ service.icon }}" alt="{{ service.title }} Icon" class="h-24 mb-4" />{% endif %}
+          <h3 class="font-bold text-xl">{{ service.title }}</h3>
+          <p class="text-base text-gray-600 mt-3">{{ service.description }}</p>
         </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="py-12">
+<section class="py-16">
   <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <h3 class="text-xl font-semibold mb-2">Service Area</h3>
-      <p class="text-gray-700 mb-4">We serve all of San Diego County — fast response and reliable support.</p>
+      <h3 class="text-2xl font-semibold mb-4">Service Area</h3>
+      <p class="text-gray-700 mb-6">We serve all of San Diego County — fast response and reliable support.</p>
     </div>
-    <iframe src="{{ map }}" class="rounded-lg w-full h-64 border" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="{{ map }}" class="rounded-lg w-full h-72 border" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
 
-<footer class="bg-gray-100 py-6 text-center text-sm">
+<footer class="bg-gray-100 py-6 text-center text-base">
   <p>&copy; 2025 {{ footer.company }}. All rights reserved.</p>
   <p class="mt-2">
     {{ footer.address }} | License #{{ footer.license }} | Phone: <a href="tel:{{ footer.phone }}">{{ footer.phone }}</a>
