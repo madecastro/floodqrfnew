@@ -1,0 +1,33 @@
+{
+  "title": "Flood QRF - San Diego\u2019s Restoration Experts",
+  "hero": {
+    "heading": "Welcome to Flood QRF",
+    "subheading": "Veteran-owned water damage restoration serving San Diego County."
+  },
+  "services": [
+    {
+      "title": "Water Extraction",
+      "description": "Quick removal of standing water using industrial pumps.",
+      "icon": "/images/icon-water.png"
+    },
+    {
+      "title": "Structural Drying",
+      "description": "Advanced drying to prevent mold and further damage.",
+      "icon": "/images/icon-drying.png"
+    },
+    {
+      "title": "Mold Remediation",
+      "description": "Safe removal and treatment of mold-affected areas.",
+      "icon": "/images/icon-mold.png"
+    }
+  ],
+  "map": "https://maps.google.com",
+  "footer": {
+    "company": "Flood QRF Inc.",
+    "address": "1234 Scripps Ranch Blvd, San Diego, CA",
+    "phone": "949-324-3565",
+    "license": "CA-REST-123456",
+    "instagram": "https://instagram.com/floodqrf",
+    "x": "https://x.com/floodqrf"
+  }
+}
