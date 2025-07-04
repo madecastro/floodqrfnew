@@ -1,15 +1,11 @@
 {
   "name": "flood-qrf-eleventy",
   "version": "1.0.0",
-  "description": "Flood QRF site built with Eleventy, Tailwind CSS, and Netlify CMS",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css && eleventy",
-    "start": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --watch & eleventy --serve"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "tailwindcss": "^3.4.1",
-    "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.24"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
