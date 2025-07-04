@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Flood QRF site built with Eleventy, Tailwind CSS, and Netlify CMS",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css && eleventy",
+    "start": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --watch & eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
