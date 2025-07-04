@@ -8,17 +8,17 @@
     {
       "title": "Water Extraction",
       "description": "Quick removal of standing water using industrial pumps.",
-      "icon": "/images/icon-water.png"
+      "icon": "images/icon-water.png"
     },
     {
       "title": "Structural Drying",
       "description": "Advanced drying to prevent mold and further damage.",
-      "icon": "/images/icon-drying.png"
+      "icon": "images/icon-structural.png"
     },
     {
       "title": "Mold Remediation",
       "description": "Safe removal and treatment of mold-affected areas.",
-      "icon": "/images/icon-mold.png"
+      "icon": "images/icon-mold.png"
     }
   ],
   "map": "https://maps.google.com",
