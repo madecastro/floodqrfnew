@@ -7,6 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white text-gray-900">
+    <header class="bg-blue-900 text-white px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="/images/logo.png" alt="Flood QRF Logo" class="h-10 mr-3" />
+        <span class="font-bold text-xl">Flood QRF</span>
+      </div>
+      <a href="https://jobber.example.com/request-service" class="bg-white text-blue-900 px-4 py-2 rounded font-semibold hover:bg-gray-100">Request Service</a>
+    </header>
+
     {{ content | safe }}
   </body>
 </html>
