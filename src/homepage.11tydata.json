@@ -1,32 +1,33 @@
 {
   "title": "Flood QRF - San Diego\u2019s Restoration Experts",
   "hero": {
-    "heading": "Welcome to Flood QRF",
-    "subheading": "Veteran-owned water damage restoration serving San Diego County."
+    "heading": "Veteran Owned",
+    "subheading": "San Diego\u2019s Restoration Experts",
+    "image": "/images/hero.jpg"
   },
   "services": [
     {
       "title": "Water Extraction",
-      "description": "Quick removal of standing water using industrial pumps.",
+      "description": "Fast removal of water to prevent further damage.",
       "icon": "/images/icon-water.png"
     },
     {
       "title": "Structural Drying",
-      "description": "Advanced drying to prevent mold and further damage.",
+      "description": "Industrial equipment dries your home safely and efficiently.",
       "icon": "/images/icon-structural.png"
     },
     {
       "title": "Mold Remediation",
-      "description": "Safe removal and treatment of mold-affected areas.",
+      "description": "Safe removal of mold to protect your property and health.",
       "icon": "/images/icon-mold.png"
     }
   ],
-  "map": "https://maps.google.com",
+  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106142.2493!2d-117.2002!3d32.7157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954afc9fbaafd%3A0x8e0b0d3e9fd73502!2sSan+Diego%2C+CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus",
   "footer": {
     "company": "Flood QRF Inc.",
-    "address": "1234 Scripps Ranch Blvd, San Diego, CA",
-    "phone": "949-324-3565",
-    "license": "CA-REST-123456",
+    "address": "123 Scripps Ranch Blvd, San Diego, CA 92131",
+    "phone": "(949) 324-3565",
+    "license": "012545",
     "instagram": "https://instagram.com/floodqrf",
     "x": "https://x.com/floodqrf"
   }
