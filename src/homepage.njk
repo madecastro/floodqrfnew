@@ -39,16 +39,3 @@ permalink: /
     <iframe src="{{ map }}" class="rounded-lg w-full h-80 border" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
-
-<footer class="bg-gray-100 py-8 text-center text-lg">
-  <p>&copy; 2025 {{ footer.company }}. All rights reserved.</p>
-  <p class="mt-2">
-    {{ footer.address }} | License #{{ footer.license }} | Phone:
-    <a href="tel:{{ footer.phone }}" class="underline">{{ footer.phone }}</a>
-  </p>
-  <p class="mt-2">
-    {% if footer.instagram %}<a href="{{ footer.instagram }}" class="underline">Instagram</a>{% endif %}
-    {% if footer.instagram and footer.x %} | {% endif %}
-    {% if footer.x %}<a href="{{ footer.x }}" class="underline">X</a>{% endif %}
-  </p>
-</footer>

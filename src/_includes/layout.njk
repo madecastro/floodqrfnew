@@ -3,38 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#002b45',  // dark blue
-              accent: '#c8102e',   // strong red
-              secondary: '#f4f4f4',
-            }
-          }
-        }
-      }
-    </script>
+    <title>{{ title or "Flood QRF - San Diego’s Restoration Experts" }}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <meta name="description" content="San Diego County's trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies." />
+    <meta property="og:title" content="Flood QRF - San Diego’s Restoration Experts" />
+    <meta property="og:description" content="Fast, reliable water damage response for San Diego County. Veteran-owned and operated." />
+    <meta property="og:image" content="/images/hero.png" />
+    <meta property="og:url" content="https://floodqrfnew.netlify.app/" />
   </head>
-  <body class="bg-white text-gray-900">
-    <header class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" class="flex items-center">
-          <img src="/images/logo.png" alt="Flood QRF Logo" class="h-10 mr-2" />
-          <span class="text-xl font-bold text-blue-900">Flood QRF</span>
-        </a>
-        <a href="tel:{{ footer.phone }}" class="text-sm font-medium text-blue-700 hover:underline">
-          📞 Call Now
-        </a>
+  <body class="bg-white text-gray-900 font-sans">
+
+    <!-- HEADER -->
+    <header class="bg-blue-900 text-white py-4 px-6 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="/images/logo.png" alt="Flood QRF Logo" class="h-14 w-auto" />
+        <span class="text-xl md:text-2xl font-bold">Flood QRF</span>
       </div>
+      <a
+        href="https://jobber.page.link/YourJobberLinkHere"
+        class="bg-white text-blue-900 font-semibold px-5 py-2 rounded shadow hover:bg-gray-200"
+      >
+        Request Service
+      </a>
     </header>
 
+    <!-- PAGE CONTENT -->
+    {{ content | safe }}
 
-    <main>
-      {{ content | safe }}
-    </main>
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 text-center text-sm">
+      <p>&copy; 2025 {{ footer.company }}. All rights reserved.</p>
+      <p class="mt-2">
+        {{ footer.address }} | License #{{ footer.license }} |
+        Phone: <a class="underline" href="tel:{{ footer.phone }}">{{ footer.phone }}</a>
+      </p>
+      <p class="mt-2">
+        {% if footer.instagram %}<a href="{{ footer.instagram }}" class="underline">Instagram</a>{% endif %}
+        {% if footer.instagram and footer.x %} | {% endif %}
+        {% if footer.x %}<a href="{{ footer.x }}" class="underline">X</a>{% endif %}
+      </p>
+    </footer>
+    
   </body>
 </html>
