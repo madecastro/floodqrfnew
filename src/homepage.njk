@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <section class="relative w-full overflow-hidden">
-  <img src="/images/hero.png" alt="Flood QRF Hero" class="w-full h-[700px] md:h-[800px] lg:h-[900px] object-cover object-center" />
+  <img src="/images/hero.png" alt="Flood QRF Hero" class="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover object-center" />
   <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4">
     <h1 class="text-5xl md:text-6xl font-bold mb-6">{{ hero.heading }}</h1>
     <p class="text-xl md:text-2xl text-gray-200 mb-8">{{ hero.subheading }}</p>
@@ -35,28 +35,31 @@ permalink: /
 <section class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-4xl font-semibold mb-12">Why Choose Flood QRF</h2>
-    <div class="grid md:grid-cols-3 gap-10 text-left">
-      <div class="flex items-start space-x-4">
-        <img src="/images/icon-shield.png" alt="Veteran Owned Icon" class="h-12 w-12" />
-        <div>
-          <h3 class="text-xl font-bold mb-1">Veteran-Owned & Operated</h3>
-          <p class="text-gray-600">We bring discipline, reliability, and a commitment to service.</p>
-        </div>
+    <div class="grid md:grid-cols-3 gap-12 text-center">
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c.666-1.333 2-2 4-2s3.334.667 4 2c.666 1.333.666 2.667 0 4-.666 1.333-2 2-4 2s-3.334-.667-4-2m0 0c-.667-1.333-2-2-4-2s-3.333.667-4 2c-.667 1.333-.667 2.667 0 4 .667 1.333 2 2 4 2s3.333-.667 4-2m0-4V5" />
+        </svg>
+        <h3 class="font-bold text-2xl mb-2">Veteran-Owned & Operated</h3>
+        <p class="text-lg text-gray-600">We bring discipline, reliability, and a commitment to service.</p>
       </div>
-      <div class="flex items-start space-x-4">
-        <img src="/images/icon-clock.png" alt="24/7 Service Icon" class="h-12 w-12" />
-        <div>
-          <h3 class="text-xl font-bold mb-1">Rapid Emergency Response</h3>
-          <p class="text-gray-600">Available 24/7 to contain damage fast and reduce loss.</p>
-        </div>
+
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h3 class="font-bold text-2xl mb-2">Rapid Emergency Response</h3>
+        <p class="text-lg text-gray-600">Available 24/7 to contain damage fast and reduce loss.</p>
       </div>
-      <div class="flex items-start space-x-4">
-        <img src="/images/icon-clipboard.png" alt="Insurance Help Icon" class="h-12 w-12" />
-        <div>
-          <h3 class="text-xl font-bold mb-1">Insurance Claims Support</h3>
-          <p class="text-gray-600">We work directly with your insurance to simplify the process.</p>
-        </div>
+
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+        </svg>
+        <h3 class="font-bold text-2xl mb-2">Insurance Claims Support</h3>
+        <p class="text-lg text-gray-600">We work directly with your insurance to simplify the process.</p>
       </div>
+
     </div>
   </div>
 </section>
