@@ -21,9 +21,23 @@ permalink: /
     <div class="grid md:grid-cols-3 gap-12">
       {% for service in services %}
         <div class="flex flex-col items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
-          </svg>
+          {% if service.title == 'Water Extraction' %}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l3-3m-3 3l-3-3m6 6H6" />
+            </svg>
+          {% elif service.title == 'Structural Drying' %}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 21h18M4 8h16M4 16h16" />
+            </svg>
+          {% elif service.title == 'Mold Remediation' %}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17a4 4 0 118 0m-8 0a4 4 0 00-8 0m8 0H3m16-6a4 4 0 00-8 0m8 0a4 4 0 118 0m-8 0h8" />
+            </svg>
+          {% else %}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+            </svg>
+          {% endif %}
           <h3 class="font-bold text-2xl">{{ service.title }}</h3>
           <p class="text-lg text-gray-600 mt-3">{{ service.description }}</p>
         </div>
