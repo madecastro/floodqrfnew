@@ -21,9 +21,9 @@ permalink: /
     <div class="grid md:grid-cols-3 gap-12">
       {% for service in services %}
         <div class="flex flex-col items-center">
-          {% if service.icon %}
-            <img src="{{ service.icon }}" alt="{{ service.title }} Icon" class="h-32 mb-5" />
-          {% endif %}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-blue-800 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+          </svg>
           <h3 class="font-bold text-2xl">{{ service.title }}</h3>
           <p class="text-lg text-gray-600 mt-3">{{ service.description }}</p>
         </div>
