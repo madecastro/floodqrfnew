@@ -121,3 +121,28 @@ permalink: /
     </div>
   </div>
 </section>
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-semibold text-center mb-12">Gallery</h2>
+    <div class="relative overflow-hidden">
+      <div class="flex animate-scroll-gallery space-x-4 w-max">
+        <img src="/images/gallery-tech-customer.jpg" alt="Technician consulting with customer" class="w-full max-w-sm rounded-lg shadow" />
+        <img src="/images/gallery-truck-house.jpg" alt="Service truck outside home" class="w-full max-w-sm rounded-lg shadow" />
+        <img src="/images/gallery-water-extraction.jpg" alt="Residential water extraction" class="w-full max-w-sm rounded-lg shadow" />
+        <img src="/images/gallery-structural-drying.jpg" alt="Plastic-sealed drying area" class="w-full max-w-sm rounded-lg shadow" />
+        <img src="/images/gallery-demo.jpg" alt="Technicians removing drywall and flooring" class="w-full max-w-sm rounded-lg shadow" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes scroll-gallery {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-gallery {
+  animation: scroll-gallery 40s linear infinite;
+}
+</style>
