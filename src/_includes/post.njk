@@ -4,7 +4,7 @@ layout: layout.njk
 <article class="max-w-3xl mx-auto px-4 py-12">
   <a href="/blog/" class="text-sm underline text-blue-900">&larr; Back to Blog</a>
   <h1 class="text-4xl font-bold mt-3">{{ title }}</h1>
-  {% if date %}<p class="text-sm text-gray-600 mt-2">{{ date | date("MMMM d, yyyy") }}</p>{% endif %}
+  {% if date %}<p class="text-sm text-gray-600 mt-2">{{ helpers.formatDate(date) }}</p>{% endif %}
   <div class="prose max-w-none mt-8">
     {{ content | safe }}
   </div>

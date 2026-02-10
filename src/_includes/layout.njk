@@ -109,7 +109,7 @@
       </div>
 
       <div class="border-t border-blue-800 text-center text-xs text-blue-100 py-4">
-        <span>&copy; {{ "now" | date("yyyy") }} {{ footer.company or site.legal_name }}. All rights reserved.</span>
+        <span>&copy; {{ helpers.currentYear() }} {{ footer.company or site.legal_name }}. All rights reserved.</span>
       </div>
     </footer>
 
