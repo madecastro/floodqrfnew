@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: Insurance Documentation: What Adjusters Need
+title: "Insurance Documentation: What Adjusters Need"
 date: 2026-02-10
 permalink: /blog/insurance-documentation/
 ---
