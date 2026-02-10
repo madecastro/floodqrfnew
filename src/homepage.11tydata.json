@@ -1,9 +1,39 @@
 {
   "title": "Flood QRF - San Diego\u2019s Restoration Experts",
   "hero": {
-    "heading": "24/7 Emergency Services",
-    "subheading": "San Diego\u2019s Restoration Experts",
-    "image": "/images/hero.jpg"
+    "heading": "24/7 Emergency Water Damage Response",
+    "subheading": "Fast, certified mitigation for homes and businesses across San Diego County.",
+    "image": "/images/hero.png",
+    "primaryCta": {
+      "label": "Request Service",
+      "href": "site.jobber_url"
+    },
+    "secondaryCta": {
+      "label": "Call Now",
+      "href": "tel:9493243565"
+    }
+  },
+  "trust_bar": [
+    {
+      "title": "IICRC Certified",
+      "text": "WRT & ASD-trained technicians"
+    },
+    {
+      "title": "On-Site Fast",
+      "text": "Rapid emergency response"
+    },
+    {
+      "title": "Insurance Help",
+      "text": "Documentation & carrier coordination"
+    },
+    {
+      "title": "Veteran-Owned",
+      "text": "Disciplined, reliable service"
+    }
+  ],
+  "services_intro": {
+    "heading": "Our Services",
+    "subheading": "Everything you need to stop damage fast, dry the structure, and prevent long-term issues."
   },
   "services": [
     {
@@ -13,22 +43,139 @@
     },
     {
       "title": "Structural Drying",
-      "description": "Industrial equipment dries your home safely and efficiently.",
-      "icon": "/images/icon-structural.png"
+      "description": "Industrial dehumidification and monitoring to fully dry your home.",
+      "icon": "/images/icon-drying.png"
     },
     {
       "title": "Mold Remediation",
-      "description": "Safe removal of mold to protect your property and health.",
+      "description": "Safe containment and removal to restore indoor air quality.",
       "icon": "/images/icon-mold.png"
     }
   ],
-  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106142.2493!2d-117.2002!3d32.7157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954afc9fbaafd%3A0x8e0b0d3e9fd73502!2sSan+Diego%2C+CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus",
+  "additional_services_intro": {
+    "heading": "Additional Services",
+    "subheading": "When the job needs more than drying \u2014 we can handle the heavy lifting too."
+  },
+  "additional_services": [
+    {
+      "title": "Pack-outs & Contents Handling",
+      "description": "Careful inventory, packing, transport, and storage coordination to protect what matters.",
+      "icon": "/images/icon-packout.png"
+    },
+    {
+      "title": "Selective Demolition",
+      "description": "Controlled tear-out of wet materials to accelerate drying and reduce rebuild scope.",
+      "icon": "/images/icon-demo.png"
+    },
+    {
+      "title": "Post-Construction Cleaning",
+      "description": "Detailed cleanup after rebuild so you can get back to normal, faster.",
+      "icon": "/images/icon-clean.png"
+    }
+  ],
+  "how_it_works": {
+    "heading": "How It Works",
+    "steps": [
+      {
+        "title": "1) Call or Request Service",
+        "text": "Tell us what happened. We\u2019ll dispatch and guide you on immediate next steps."
+      },
+      {
+        "title": "2) Mitigate & Dry",
+        "text": "We extract water, set equipment, and monitor moisture until dry targets are met."
+      },
+      {
+        "title": "3) Document for Insurance",
+        "text": "Photos, readings, and line-item notes to support your claim and reduce friction."
+      }
+    ]
+  },
+  "our_story_preview": {
+    "heading": "Our Story",
+    "text": "Flood QRF was built for one reason: to deliver disciplined, reliable restoration when people need it most.",
+    "bullets": [
+      "Veteran-owned and operated",
+      "IICRC-certified technicians",
+      "Clear communication and documentation"
+    ],
+    "cta_label": "Read Our Story",
+    "cta_href": "/our-story/"
+  },
+  "team_preview": {
+    "heading": "Meet the Team",
+    "text": "Certified technicians and project leads who treat your home like their own.",
+    "cta_label": "View Team",
+    "cta_href": "/team/",
+    "members": [
+      {
+        "name": "Lead Technician",
+        "role": "WRT / ASD",
+        "bio": "Specializes in extraction, containment, and drying strategy.",
+        "image": "/images/team-1.jpg"
+      },
+      {
+        "name": "Project Lead",
+        "role": "Customer Success",
+        "bio": "Keeps timelines clear and communication tight with you and your carrier.",
+        "image": "/images/team-2.jpg"
+      },
+      {
+        "name": "Contents Specialist",
+        "role": "Pack-outs",
+        "bio": "Inventory, protection, and coordination for contents handling.",
+        "image": "/images/team-3.jpg"
+      }
+    ]
+  },
+  "blog_preview": {
+    "heading": "From the Blog",
+    "text": "Practical guidance for water emergencies, insurance documentation, and drying timelines.",
+    "cta_label": "Visit Blog",
+    "cta_href": "/blog/",
+    "posts": [
+      {
+        "title": "The First 60 Minutes After a Water Loss",
+        "href": "/blog/the-first-60-minutes/",
+        "excerpt": "What to do immediately to reduce damage and protect your claim."
+      },
+      {
+        "title": "How Long Does Structural Drying Take?",
+        "href": "/blog/drying-timelines/",
+        "excerpt": "Typical timelines, what impacts them, and how we verify dryness."
+      },
+      {
+        "title": "Insurance Documentation: What Adjusters Need",
+        "href": "/blog/insurance-documentation/",
+        "excerpt": "Photos, readings, and notes that help a claim move faster."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "FAQ",
+    "items": [
+      {
+        "q": "Do you work with insurance?",
+        "a": "Yes. We document the loss, provide moisture logs, and coordinate with your carrier as needed."
+      },
+      {
+        "q": "How fast can you arrive?",
+        "a": "Availability varies, but we prioritize emergency calls and aim for rapid response across San Diego County."
+      },
+      {
+        "q": "Will you rebuild?",
+        "a": "We focus on mitigation, drying, and associated services like pack-outs and selective demo. Rebuild can be coordinated with your preferred contractor."
+      }
+    ]
+  },
+  "map": "https://www.google.com/maps?q=Scripps+Ranch,+San+Diego,+CA&output=embed",
   "footer": {
     "company": "Flood QRF Inc.",
-    "address": "123 Scripps Ranch Blvd, San Diego, CA 92131",
-    "phone": "(949) 324-3565",
-    "license": "012545",
+    "address": "Scripps Ranch, San Diego, CA (placeholder)",
+    "phone": "949-324-3565",
+    "license": "XXXXXX (placeholder)",
+    "email": "support@floodqrf.com",
     "instagram": "https://instagram.com/floodqrf",
-    "x": "https://x.com/floodqrf"
+    "x": "https://x.com/floodqrf",
+    "jobber": "https://jobber.page.link/YourJobberLinkHere"
   }
 }
