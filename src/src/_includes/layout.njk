@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or 'Flood QRF — San Diego County\'s restoration experts' }}</title>
+  <meta name="description" content="San Diego County's trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies." />
+
+  <!-- Tailwind (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Option A mockup styling tokens -->
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --navy2:#0a2a4a;
+      --red:#e11d48;
+      --ink:#0b1220;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f7fb;
+      --ring: rgba(225,29,72,.16);
+    }
+    .bg-navy{background:var(--navy);} .bg-navy2{background:var(--navy2);} .text-navy{color:var(--navy);} .text-red{color:var(--red);} .ring-red{box-shadow:0 0 0 6px var(--ring);} 
+    .hero-gradient{background: radial-gradient(1200px 600px at 20% 10%, rgba(225,29,72,.22), transparent 55%), radial-gradient(900px 700px at 85% 15%, rgba(59,130,246,.22), transparent 55%), linear-gradient(180deg, rgba(11,31,58,.92), rgba(11,31,58,.68));}
+    .glass{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(255,255,255,.08);}
+    .badge{background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18)}
+    .shadow-soft{box-shadow:0 16px 60px rgba(2,6,23,.12)}
+  </style>
+</head>
+
+{% set phone = (footer.phone or site.phone or "(949) 324-3565") %}
+{% set phoneDigits = phone | replace('(','') | replace(')','') | replace(' ','') | replace('-', '') %}
+{% set jobber = footer.jobber or site.jobber_url or "https://jobber.page.link/YourJobberLinkHere" %}
+{% set brandName = (brand.name or site.name or "Flood QRF") %}
+{% set brandTagline = (brand.tagline or site.tagline or "San Diego County’s restoration experts") %}
+
+<body class="bg-white text-gray-900">
+
+  <!-- Top alert bar -->
+  <div class="bg-navy text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-white bg-opacity-15">{{ alert.badge or '24/7' }}</span>
+        <span>{{ alert.text or 'Emergency water & sewage response across San Diego County' }}</span>
+      </div>
+      <a class="font-semibold underline" href="tel:{{ phoneDigits }}">Call {{ phone }}</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-lg bg-navy2 flex items-center justify-center text-white font-extrabold">{{ brand.initials or 'FQ' }}</div>
+        <div class="leading-tight">
+          <div class="font-extrabold text-lg">{{ brandName }}</div>
+          <div class="text-xs text-gray-500">{{ brandTagline }}</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/#services" class="hover:text-red">Services</a>
+        <a href="/#additional" class="hover:text-red">Additional Services</a>
+        <a href="/#story" class="hover:text-red">Our Story</a>
+        <a href="/#team" class="hover:text-red">Team</a>
+        <a href="/blog/" class="hover:text-red">Blog</a>
+        <a href="/#contact" class="hover:text-red">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="tel:{{ phoneDigits }}" class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg border font-semibold hover:bg-gray-50">Call</a>
+        <a href="{{ jobber }}" class="inline-flex items-center px-4 py-2 rounded-lg bg-navy2 text-white font-extrabold hover:opacity-95 shadow-soft">Request Service</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="font-extrabold text-lg">{{ footer.company or 'Flood QRF Inc.' }}</div>
+          <div class="text-sm text-gray-200 mt-2">{{ footer.tagline or "San Diego County’s water restoration experts." }}</div>
+          {% if footer.license %}
+          <div class="text-sm text-gray-200 mt-3">License #{{ footer.license }}</div>
+          {% endif %}
+        </div>
+        <div>
+          <div class="font-extrabold">Explore</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-200">
+            <li><a class="hover:underline" href="/#services">Services</a></li>
+            <li><a class="hover:underline" href="/#additional">Additional Services</a></li>
+            <li><a class="hover:underline" href="/#story">Our Story</a></li>
+            <li><a class="hover:underline" href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-extrabold">Contact</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-200">
+            <li><a class="hover:underline" href="tel:{{ phoneDigits }}">{{ phone }}</a></li>
+            <li><a class="hover:underline" href="mailto:{{ footer.email or 'support@floodqrf.com' }}">{{ footer.email or 'support@floodqrf.com' }}</a></li>
+            {% if footer.address %}
+            <li class="leading-snug">{{ footer.address | safe }}</li>
+            {% endif %}
+          </ul>
+        </div>
+        <div>
+          <div class="font-extrabold">Social</div>
+          <ul class="mt-3 space-y-2 text-sm text-gray-200">
+            {% if footer.instagram %}<li><a class="hover:underline" href="{{ footer.instagram }}">Instagram</a></li>{% endif %}
+            {% if footer.x %}<li><a class="hover:underline" href="{{ footer.x }}">X</a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-white border-opacity-10 text-xs text-gray-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+        <div>© <span id="siteYear"></span> {{ footer.company or 'Flood QRF Inc.' }}. All rights reserved.</div>
+        <div>{{ footer.note or 'Option A • Trust + Depth' }}</div>
+      </div>
+    </div>
+    <script>
+      (function(){
+        var el = document.getElementById('siteYear');
+        if(el) el.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </footer>
+
+</body>
+</html>
