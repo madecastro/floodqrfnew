@@ -1,0 +1,15 @@
+---
+layout: page.njk
+title: Blog
+permalink: /blog/
+---
+
+<div class="grid md:grid-cols-3 gap-6">
+  {% for p in blog_preview.posts %}
+    <a href="{{ p.href }}" class="block border rounded-lg p-6 bg-white shadow-sm hover:shadow">
+      <div class="font-bold text-xl">{{ p.title }}</div>
+      <p class="mt-2 text-gray-700">{{ p.excerpt }}</p>
+      <div class="mt-4 underline text-blue-900 font-semibold">Read more</div>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,50 @@
+---
+layout: page.njk
+title: Contact
+permalink: /contact/
+---
+
+<div class="grid md:grid-cols-2 gap-8">
+  <div class="bg-white border rounded-lg p-6 shadow-sm">
+    <h2 class="text-2xl font-bold text-blue-900">Get help now</h2>
+    <p class="mt-2 text-gray-700">For emergencies, call 24/7. For non-urgent requests, use the form or request service.</p>
+
+    <div class="mt-4 flex flex-col sm:flex-row gap-3">
+      <a href="tel:{{ site.phone_tel }}" class="inline-block bg-blue-900 text-white font-bold px-6 py-3 rounded shadow hover:bg-blue-800 transition">📞 Call {{ site.phone }}</a>
+      <a href="{{ site.jobber_url }}" class="inline-block bg-amber-400 text-blue-900 font-bold px-6 py-3 rounded shadow hover:bg-amber-300 transition">Request Service</a>
+    </div>
+
+    <h3 class="mt-8 font-bold">Contact Form</h3>
+    <form name="contact" method="POST" data-netlify="true" action="/thank-you/" class="mt-4 space-y-3">
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <label class="block text-sm font-semibold">Name</label>
+        <input name="name" class="w-full border rounded px-3 py-2" required />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Phone</label>
+        <input name="phone" class="w-full border rounded px-3 py-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Email</label>
+        <input type="email" name="email" class="w-full border rounded px-3 py-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold">Message</label>
+        <textarea name="message" class="w-full border rounded px-3 py-2" rows="5" required></textarea>
+      </div>
+      <button class="bg-blue-900 text-white font-bold px-6 py-3 rounded shadow hover:bg-blue-800" type="submit">
+        Send Message
+      </button>
+    </form>
+  </div>
+
+  <div class="bg-white border rounded-lg p-6 shadow-sm">
+    <h2 class="text-2xl font-bold text-blue-900">Service Area</h2>
+    <p class="mt-2 text-gray-700">{{ site.service_area }}</p>
+    <div class="mt-4">
+      <iframe src="{{ site.map_embed }}" class="rounded-lg w-full h-80 border" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">Address: {{ site.address }}</p>
+  </div>
+</div>

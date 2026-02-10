@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% set metaTitle = title or site.name ~ " — " ~ site.tagline %}
+    <title>{{ metaTitle }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <meta name="description" content="{{ site.tagline }}" />
+    <meta property="og:title" content="{{ metaTitle }}" />
+    <meta property="og:description" content="{{ site.tagline }}" />
+    <meta property="og:image" content="/images/hero.png" />
+    <meta property="og:url" content="https://floodqrf.com/" />
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    {% set phone = site.phone or footer.phone %}
+    {% set phoneTel = site.phone_tel or (phone | replace('-', '') | replace('(', '') | replace(')', '') | replace(' ', '')) %}
+    {% set jobber = site.jobber_url or footer.jobber or "https://jobber.page.link/YourJobberLinkHere" %}
+    <header class="fixed top-0 left-0 w-full z-50 bg-blue-900 text-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/images/logo.png" alt="{{ site.name }} Logo" class="h-12 w-auto" />
+          <span class="text-lg md:text-xl font-bold tracking-tight">{{ site.name }}</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+          <a href="/#services" class="hover:underline">Services</a>
+          <a href="/#additional-services" class="hover:underline">Additional Services</a>
+          <a href="/our-story/" class="hover:underline">Our Story</a>
+          <a href="/team/" class="hover:underline">Team</a>
+          <a href="/blog/" class="hover:underline">Blog</a>
+          <a href="/contact/" class="hover:underline">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center space-x-3">
+          <a href="tel:{{ phoneTel }}" class="px-4 py-2 rounded bg-white text-blue-900 font-bold shadow hover:bg-gray-200">Call</a>
+          <a href="{{ jobber }}" class="px-4 py-2 rounded bg-amber-400 text-blue-900 font-bold shadow hover:bg-amber-300">Request Service</a>
+        </div>
+
+        <button id="mobileBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded hover:bg-blue-800" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden border-t border-blue-800 bg-blue-900">
+        <div class="max-w-6xl mx-auto px-4 py-4 space-y-3 text-sm font-semibold">
+          <a href="/#services" class="block hover:underline">Services</a>
+          <a href="/#additional-services" class="block hover:underline">Additional Services</a>
+          <a href="/our-story/" class="block hover:underline">Our Story</a>
+          <a href="/team/" class="block hover:underline">Team</a>
+          <a href="/blog/" class="block hover:underline">Blog</a>
+          <a href="/contact/" class="block hover:underline">Contact</a>
+          <div class="pt-2 flex items-center gap-3">
+            <a href="tel:{{ phoneTel }}" class="flex-1 text-center px-4 py-2 rounded bg-white text-blue-900 font-bold shadow hover:bg-gray-200">Call</a>
+            <a href="{{ jobber }}" class="flex-1 text-center px-4 py-2 rounded bg-amber-400 text-blue-900 font-bold shadow hover:bg-amber-300">Request Service</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      {{ content | safe }}
+    </main>
+
+    <footer class="bg-blue-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="/images/logo.png" alt="{{ site.name }} Logo" class="h-10 w-auto" />
+            <div>
+              <div class="font-bold text-lg">{{ site.name }}</div>
+              <div class="text-blue-100 text-sm">{{ site.tagline }}</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-blue-100">
+            24/7 emergency service across {{ site.service_area }}.
+          </p>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-bold mb-3">Contact</div>
+          <div>{{ footer.company or site.legal_name }}</div>
+          <div class="text-blue-100">{{ footer.address or site.address }}</div>
+          <div class="mt-2">Phone: <a class="underline" href="tel:{{ phoneTel }}">{{ phone }}</a></div>
+          <div>Email: <a class="underline" href="mailto:{{ site.email or footer.email }}">{{ site.email or footer.email }}</a></div>
+          <div class="mt-2 text-blue-100">License #{{ footer.license or site.license }}</div>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-bold mb-3">Links</div>
+          <div class="space-y-2">
+            <a href="/#services" class="block underline">Services</a>
+            <a href="/#additional-services" class="block underline">Additional Services</a>
+            <a href="/blog/" class="block underline">Blog</a>
+            <a href="/contact/" class="block underline">Contact</a>
+          </div>
+          <div class="mt-4">
+            {% if footer.instagram or site.social.instagram %}
+              <a href="{{ footer.instagram or site.social.instagram }}" class="underline">Instagram</a>
+            {% endif %}
+            {% if (footer.instagram or site.social.instagram) and (footer.x or site.social.x) %} | {% endif %}
+            {% if footer.x or site.social.x %}
+              <a href="{{ footer.x or site.social.x }}" class="underline">X</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-blue-800 text-center text-xs text-blue-100 py-4">
+        <span>&copy; {{ "now" | date("yyyy") }} {{ footer.company or site.legal_name }}. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      (function(){
+        var btn = document.getElementById('mobileBtn');
+        var menu = document.getElementById('mobileMenu');
+        if(!btn || !menu) return;
+        btn.addEventListener('click', function(){
+          menu.classList.toggle('hidden');
+        });
+      })();
+    </script>
+  </body>
+</html>

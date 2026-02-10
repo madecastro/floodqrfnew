@@ -1,0 +1,17 @@
+{
+  "name": "Flood QRF",
+  "legal_name": "Flood QRF Inc.",
+  "tagline": "San Diego County's water restoration experts.",
+  "phone": "949-324-3565",
+  "phone_tel": "9493243565",
+  "email": "support@floodqrf.com",
+  "service_area": "San Diego County, CA",
+  "jobber_url": "https://jobber.page.link/YourJobberLinkHere",
+  "address": "Scripps Ranch, San Diego, CA (placeholder)",
+  "license": "XXXXXX (placeholder)",
+  "social": {
+    "instagram": "https://instagram.com/floodqrf",
+    "x": "https://x.com/floodqrf"
+  },
+  "map_embed": "https://www.google.com/maps?q=Scripps+Ranch,+San+Diego,+CA&output=embed"
+}

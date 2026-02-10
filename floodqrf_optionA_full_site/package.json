@@ -1,0 +1,11 @@
+{
+  "name": "floodqrf-site",
+  "private": true,
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --port=8080",
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
