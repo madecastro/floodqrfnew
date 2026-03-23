@@ -29,35 +29,195 @@ collections:
         format: "json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Initials", name: "initials", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+
+          - label: "Alert Bar"
+            name: "alert"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+
           - label: "Hero"
             name: "hero"
             widget: "object"
             fields:
+              - label: "Badges"
+                name: "badges"
+                widget: "list"
+                field: { label: "Badge", name: "badge", widget: "string" }
               - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Subheading", name: "subheading", widget: "text" }
-              - { label: "Image", name: "image", widget: "image", required: false }
-          - label: "Services"
-            name: "services"
+              - { label: "Body", name: "body", widget: "text" }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                hint: "Hero CTA buttons. URL examples: tel:9493243565 for phone call, https://clienthub.getjobber.com/... for Jobber form, #contact for section link"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, or any URL" }
+              - label: "Metrics"
+                name: "metrics"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+              - label: "Quick Card"
+                name: "quickCard"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "kicker", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string" }
+                  - label: "Buttons"
+                    name: "buttons"
+                    widget: "list"
+                    hint: "Quick card action buttons. URL examples: tel:9493243565 for phone call, https://clienthub.getjobber.com/... for Jobber form"
+                    fields:
+                      - { label: "Button Text", name: "text", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, or any URL" }
+
+          - label: "Services Button"
+            name: "services_button"
+            widget: "object"
+            hint: "Button shown next to the Core Services heading"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, or any URL" }
+
+          - { label: "Services Intro", name: "services_intro", widget: "text" }
+
+          - label: "Core Services (Primary)"
+            name: "core_services_primary"
             widget: "list"
             fields:
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Icon", name: "icon", widget: "image", required: false }
+              - { label: "Description", name: "desc", widget: "text" }
+              - label: "Bullets"
+                name: "bullets"
+                widget: "list"
+                required: false
+                field: { label: "Bullet", name: "bullet", widget: "string" }
+
+          - label: "Core Services (Secondary)"
+            name: "core_services_secondary"
+            widget: "list"
+            fields:
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Additional Services Buttons"
+            name: "additional_buttons"
+            widget: "list"
+            hint: "Buttons below the additional services list. URL examples: tel:XXXXXXXXXX for phone, Jobber URL for webform, #contact for section link"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, /blog/ for blog, or any URL" }
+
+          - { label: "Additional Services Intro", name: "additional_intro", widget: "text" }
+
           - label: "Additional Services"
             name: "additional_services"
             widget: "list"
             fields:
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Icon", name: "icon", widget: "image", required: false }
-          - label: "FAQ"
-            name: "faq"
+              - { label: "Description", name: "desc", widget: "text" }
+
+          - { label: "Process Intro", name: "process_intro", widget: "text" }
+
+          - label: "Process Steps"
+            name: "process_steps"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Our Story"
+            name: "our_story"
             widget: "object"
             fields:
+              - { label: "Kicker", name: "kicker", widget: "string" }
               - { label: "Heading", name: "heading", widget: "string" }
-              - label: "Items"
-                name: "items"
-                widget: "list"
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Mission", name: "mission", widget: "string" }
+              - { label: "Values", name: "values", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                hint: "CTA button in the Our Story section"
                 fields:
-                  - { label: "Question", name: "q", widget: "string" }
-                  - { label: "Answer", name: "a", widget: "text" }
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, or any URL" }
+              - label: "Bullets"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Bullet", name: "bullet", widget: "string" }
+
+          - label: "Team Button"
+            name: "team_button"
+            widget: "object"
+            hint: "Button shown next to the Team heading"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, or any URL" }
+
+          - { label: "Team Intro", name: "team_intro", widget: "text" }
+
+          - label: "Team Members"
+            name: "team_members"
+            widget: "list"
+            fields:
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Meta", name: "meta", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+
+          - { label: "Blog Intro", name: "blog_intro", widget: "text" }
+
+          - label: "Blog Posts"
+            name: "blog_posts"
+            widget: "list"
+            fields:
+              - { label: "Meta", name: "meta", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Link", name: "href", widget: "string" }
+
+          - label: "Contact Buttons"
+            name: "contact_buttons"
+            widget: "list"
+            hint: "Action buttons in the contact section. URL examples: tel:XXXXXXXXXX for phone, Jobber URL for webform, mailto:email for email"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, mailto:email for email, or any URL" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Hours", name: "hours", widget: "string" }
+
+          - { label: "Map Embed URL", name: "map", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Company Name", name: "company", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Address (HTML)", name: "address", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "License Number", name: "license", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "X (Twitter) URL", name: "x", widget: "string", required: false }
+              - { label: "Jobber URL", name: "jobber", widget: "string" }
+              - { label: "Note", name: "note", widget: "string", required: false }

@@ -22,12 +22,21 @@
       { "value": "24/7", "label": "Emergency availability" },
       { "value": "Local", "label": "San Diego County team" }
     ],
+    "buttons": [
+      { "text": "Call Now", "url": "tel:9493243565" },
+      { "text": "Get a Free Assessment", "url": "#contact" }
+    ],
     "quickCard": {
       "kicker": "Emergency? We can help.",
       "heading": "Request Service",
-      "note": "Use this as a simple inquiry form — or replace with a Jobber embed/button."
+      "note": "Use this as a simple inquiry form — or replace with a Jobber embed/button.",
+      "buttons": [
+        { "text": "Open Jobber", "url": "https://jobber.page.link/YourJobberLinkHere" },
+        { "text": "Call", "url": "tel:9493243565" }
+      ]
     }
   },
+  "services_button": { "text": "Check Availability", "url": "#contact" },
   "services_intro": "The restoration work we do every day — built around speed, safety, and documentation.",
   "core_services_primary": [
     {
@@ -61,6 +70,10 @@
       "desc": "Photos, notes, moisture readings, and scopes that help keep the claim moving."
     }
   ],
+  "additional_buttons": [
+    { "text": "Ask About Add-ons", "url": "#contact" },
+    { "text": "See Tips & Guides", "url": "/blog/" }
+  ],
   "additional_intro": "To keep your project moving, we also handle pre/post work surrounding mitigation and rebuild.",
   "additional_services": [
     {
@@ -92,6 +105,7 @@
     "body": "Restoration is stressful — the best companies reduce chaos. We’re a veteran-owned team that shows up quickly, communicates clearly, and documents everything so you can make decisions with confidence.",
     "mission": "Minimize loss and return safe living conditions fast.",
     "values": "Integrity, readiness, and meticulous work.",
+    "button": { "text": "Talk to the Team", "url": "#contact" },
     "bullets": [
       "Story-led modules that increase trust and time on page.",
       "Team section with real faces and certifications.",
@@ -99,6 +113,7 @@
       "Additional Services showcased clearly (pack-outs, demo, post-clean)."
     ]
   },
+  "team_button": { "text": "Work with us", "url": "#contact" },
   "team_intro": "Use real names/photos later — here are mock cards showing the layout.",
   "team_members": [
     { "role": "Founder / Response Lead", "meta": "WRT • ASD • OSHA", "quote": "We treat every home like it’s our own — fast, clean, and documented." },
@@ -125,6 +140,10 @@
       "desc": "When porous materials must go — and how we handle disposal and sanitation.",
       "href": "/blog/sewage-safety/"
     }
+  ],
+  "contact_buttons": [
+    { "text": "Request Service", "url": "https://jobber.page.link/YourJobberLinkHere" },
+    { "text": "Email", "url": "mailto:support@floodqrf.com" }
   ],
   "contact": {
     "hours": "Emergency response 24/7 • Office: Mon–Fri 8am–5pm"
