@@ -30,8 +30,9 @@ permalink: /
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="tel:{{ phoneDigits }}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-navy font-extrabold ring-red">Call Now</a>
-          <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white border-opacity-30 text-white font-extrabold hover:bg-white hover:bg-opacity-10">Get a Free Assessment</a>
+          {% for btn in hero.buttons %}
+          <a href="{{ btn.url }}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg {{ 'bg-white text-navy font-extrabold ring-red' if loop.first else 'border border-white border-opacity-30 text-white font-extrabold hover:bg-white hover:bg-opacity-10' }}">{{ btn.text }}</a>
+          {% endfor %}
         </div>
 
         <div class="mt-8 grid grid-cols-3 gap-4 text-white">
@@ -78,8 +79,9 @@ permalink: /
           </select>
           <textarea name="details" class="w-full px-4 py-3 rounded-lg border" rows="3" placeholder="Tell us what happened…"></textarea>
           <div class="mt-2 flex gap-3">
-            <a href="{{ jobber }}" class="flex-1 inline-flex items-center justify-center px-5 py-3 rounded-lg bg-navy2 text-white font-extrabold">Open Jobber</a>
-            <a href="tel:{{ phoneDigits }}" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border font-extrabold">Call</a>
+            {% for btn in hero.quickCard.buttons %}
+            <a href="{{ btn.url }}" class="{{ 'flex-1 ' if loop.first }}inline-flex items-center justify-center px-5 py-3 rounded-lg {{ 'bg-navy2 text-white font-extrabold' if loop.first else 'border font-extrabold' }}">{{ btn.text }}</a>
+            {% endfor %}
           </div>
           <div class="mt-4 text-xs text-gray-500">Submitting this form will email you via Netlify Forms (optional). You can remove it if you want Jobber-only.</div>
         </form>
@@ -97,7 +99,7 @@ permalink: /
         <h2 class="text-3xl md:text-4xl font-extrabold">Core Services</h2>
         <p class="text-gray-600 mt-2 max-w-2xl">{{ services_intro or 'The restoration work we do every day — built around speed, safety, and documentation.' }}</p>
       </div>
-      <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border font-semibold hover:bg-white">Check Availability</a>
+      <a href="{{ services_button.url or '#contact' }}" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border font-semibold hover:bg-white">{{ services_button.text or 'Check Availability' }}</a>
     </div>
 
     <div class="mt-10 grid md:grid-cols-3 gap-6">
@@ -163,8 +165,9 @@ permalink: /
         </div>
 
         <div class="mt-8 flex gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-navy2 text-white font-extrabold">Ask About Add-ons</a>
-          <a href="/blog/" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border font-extrabold">See Tips & Guides</a>
+          {% for btn in additional_buttons %}
+          <a href="{{ btn.url }}" class="inline-flex items-center justify-center px-5 py-3 rounded-lg {{ 'bg-navy2 text-white font-extrabold' if loop.first else 'border font-extrabold' }}">{{ btn.text }}</a>
+          {% endfor %}
         </div>
       </div>
 
@@ -212,7 +215,7 @@ permalink: /
           </div>
         </div>
         <div class="mt-7">
-          <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-navy2 text-white font-extrabold">Talk to the Team</a>
+          <a href="{{ our_story.button.url or '#contact' }}" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-navy2 text-white font-extrabold">{{ our_story.button.text or 'Talk to the Team' }}</a>
         </div>
       </div>
 
@@ -245,7 +248,7 @@ permalink: /
         <h2 class="text-3xl md:text-4xl font-extrabold">Meet the Team</h2>
         <p class="text-gray-600 mt-2">{{ team_intro or 'Use real names/photos later — here are mock cards showing the layout.' }}</p>
       </div>
-      <a href="#contact" class="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-lg border font-semibold hover:bg-gray-50">Work with us</a>
+      <a href="{{ team_button.url or '#contact' }}" class="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-lg border font-semibold hover:bg-gray-50">{{ team_button.text or 'Work with us' }}</a>
     </div>
 
     <div class="mt-10 grid md:grid-cols-3 gap-6">
@@ -310,8 +313,9 @@ permalink: /
             <a class="text-2xl font-extrabold text-navy" href="tel:{{ phoneDigits }}">{{ phone }}</a>
             <div class="text-sm text-gray-600 mt-1">Or tap “Request Service” to open Jobber scheduling.</div>
             <div class="mt-4 flex gap-3">
-              <a class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-navy2 text-white font-extrabold" href="{{ jobber }}">Request Service</a>
-              <a class="inline-flex items-center justify-center px-5 py-3 rounded-lg border font-extrabold" href="mailto:{{ footer.email or 'support@floodqrf.com' }}">Email</a>
+              {% for btn in contact_buttons %}
+              <a class="inline-flex items-center justify-center px-5 py-3 rounded-lg {{ 'bg-navy2 text-white font-extrabold' if loop.first else 'border font-extrabold' }}" href="{{ btn.url }}">{{ btn.text }}</a>
+              {% endfor %}
             </div>
           </div>
           <div class="rounded-2xl border p-5 bg-gray-50">
