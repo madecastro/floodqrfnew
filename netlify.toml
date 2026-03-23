@@ -6,8 +6,3 @@
   command = "npm run dev"
   port = 8080
   publish = "_site"
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
