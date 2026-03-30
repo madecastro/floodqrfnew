@@ -39,6 +39,14 @@ collections:
               - { label: "Tagline", name: "tagline", widget: "string" }
               - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Upload a logo image. If empty, the brand initials will be shown instead." }
 
+          - label: "Navigation Links"
+            name: "nav_links"
+            widget: "list"
+            hint: "Header navigation links. Use anchor links like /#services for page sections, or paths like /blog/ for other pages."
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use /#section for page sections, /path/ for other pages, or a full URL" }
+
           - label: "Alert Bar"
             name: "alert"
             widget: "object"
