@@ -35,8 +35,9 @@ collections:
             widget: "object"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Initials", name: "initials", widget: "string" }
+              - { label: "Initials", name: "initials", widget: "string", hint: "Fallback text shown if no logo image is set" }
               - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Upload a logo image. If empty, the brand initials will be shown instead." }
 
           - label: "Alert Bar"
             name: "alert"
@@ -176,6 +177,8 @@ collections:
             name: "team_members"
             widget: "list"
             fields:
+              - { label: "Name", name: "name", widget: "string", required: false, hint: "Team member's name" }
+              - { label: "Photo", name: "image", widget: "image", required: false, hint: "Team member's photo" }
               - { label: "Role", name: "role", widget: "string" }
               - { label: "Meta", name: "meta", widget: "string" }
               - { label: "Quote", name: "quote", widget: "text" }
