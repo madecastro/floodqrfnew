@@ -29,6 +29,8 @@ collections:
         format: "json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "meta_description", widget: "text", required: false, hint: "Description shown in search engine results" }
+          - { label: "Favicon", name: "favicon", widget: "image", required: false, hint: "Small icon shown in the browser tab. Upload a square image (e.g. 32×32 or 64×64 PNG/ICO)." }
 
           - label: "Brand"
             name: "brand"

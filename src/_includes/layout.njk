@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ title or 'Flood QRF — San Diego County\'s restoration experts' }}</title>
-  <meta name="description" content="San Diego County's trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies." />
+  <meta name="description" content="{{ meta_description or 'San Diego County\'s trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies.' }}" />
+  {% if favicon %}
+  <link rel="icon" href="{{ favicon }}" />
+  {% endif %}
 
   <!-- Tailwind (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
