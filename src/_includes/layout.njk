@@ -64,12 +64,9 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
-        <a href="/#services" class="hover:text-red">Services</a>
-        <a href="/#additional" class="hover:text-red">Additional Services</a>
-        <a href="/#story" class="hover:text-red">Our Story</a>
-        <a href="/#team" class="hover:text-red">Team</a>
-        <a href="/blog/" class="hover:text-red">Blog</a>
-        <a href="/#contact" class="hover:text-red">Contact</a>
+        {% for link in nav_links %}
+        <a href="{{ link.url }}" class="hover:text-red">{{ link.label }}</a>
+        {% endfor %}
       </nav>
 
       <div class="flex items-center gap-2">
