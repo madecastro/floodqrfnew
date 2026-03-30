@@ -259,9 +259,14 @@ permalink: /
       ]) %}
       <div class="rounded-2xl border bg-white p-6 shadow-soft">
         <div class="flex items-center gap-4">
-          <div class="h-14 w-14 rounded-2xl bg-gray-100 flex items-center justify-center">👤</div>
+          {% if t.image %}
+          <img src="{{ t.image }}" alt="{{ t.name or t.role }}" class="h-14 w-14 rounded-2xl object-cover" />
+          {% else %}
+          <div class="h-14 w-14 rounded-2xl bg-gray-100 flex items-center justify-center text-xl font-bold text-gray-400">{{ (t.name | first) if t.name else '👤' }}</div>
+          {% endif %}
           <div>
-            <div class="font-extrabold">{{ t.role }}</div>
+            {% if t.name %}<div class="font-extrabold">{{ t.name }}</div>{% endif %}
+            <div class="{% if t.name %}text-sm text-gray-600{% else %}font-extrabold{% endif %}">{{ t.role }}</div>
             <div class="text-sm text-gray-600">{{ t.meta }}</div>
           </div>
         </div>

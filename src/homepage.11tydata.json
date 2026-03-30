@@ -3,7 +3,8 @@
   "brand": {
     "name": "Flood QRF",
     "initials": "FQ",
-    "tagline": "San Diego County’s restoration experts"
+    "tagline": "San Diego County’s restoration experts",
+    "logo": ""
   },
   "alert": {
     "badge": "24/7",
@@ -116,9 +117,9 @@
   "team_button": { "text": "Work with us", "url": "#contact" },
   "team_intro": "Use real names/photos later — here are mock cards showing the layout.",
   "team_members": [
-    { "role": "Founder / Response Lead", "meta": "WRT • ASD • OSHA", "quote": "We treat every home like it’s our own — fast, clean, and documented." },
-    { "role": "Operations Manager", "meta": "Scheduling • Claims • Customer care", "quote": "Coordinates dispatch, daily updates, and insurance documentation." },
-    { "role": "Lead Technician", "meta": "Containment • Drying • Demo", "quote": "Specializes in complex dry-outs and controlled selective demolition." }
+    { "name": "", "image": "", "role": "Founder / Response Lead", "meta": "WRT • ASD • OSHA", "quote": "We treat every home like it’s our own — fast, clean, and documented." },
+    { "name": "", "image": "", "role": "Operations Manager", "meta": "Scheduling • Claims • Customer care", "quote": "Coordinates dispatch, daily updates, and insurance documentation." },
+    { "name": "", "image": "", "role": "Lead Technician", "meta": "Containment • Drying • Demo", "quote": "Specializes in complex dry-outs and controlled selective demolition." }
   ],
   "blog_intro": "A lightweight blog gives you consistent SEO growth and content to share with customers.",
   "blog_posts": [
