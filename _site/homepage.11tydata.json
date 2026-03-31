@@ -1,0 +1,280 @@
+{
+  "contact": {
+    "hours": "Emergency response 24/7 • Office: Mon–Fri 8am–5pm"
+  },
+  "core_services_primary": [
+    {
+      "icon": "💧",
+      "title": "Water Damage Restoration",
+      "desc": "Water extraction, moisture mapping, containment, drying, and monitoring.",
+      "bullets": [
+        "Emergency extraction",
+        "Drying equipment placement",
+        "Daily moisture checks"
+      ]
+    },
+    {
+      "icon": "🧪",
+      "title": "Sewage Cleanup",
+      "desc": "Category 3 cleanup with safety-first procedures and proper disposal.",
+      "bullets": [
+        "Containment & sanitation",
+        "Removal of affected materials",
+        "Deodorization"
+      ]
+    },
+    {
+      "icon": "🌀",
+      "title": "Structural Drying",
+      "desc": "Dehumidification, airflow management, and verified dry standards.",
+      "bullets": [
+        "ASD-informed drying plans",
+        "Temperature & humidity control",
+        "Documentation for insurance"
+      ]
+    }
+  ],
+  "meta_description": "San Diego County's trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies.",
+  "our_story": {
+    "values": "Integrity, readiness, and meticulous work.",
+    "body": "Restoration is stressful — the best companies reduce chaos. We’re a veteran-owned team that shows up quickly, communicates clearly, and documents everything so you can make decisions with confidence.",
+    "heading": "Why we built Flood QRF",
+    "mission": "Minimize loss and return safe living conditions fast.",
+    "sitemap_title": "Key differentiators ",
+    "bullets": [
+      "24/7 emergency response when water damage cannot wait.",
+      "Fast mitigation and drying to help prevent further property damage.",
+      "Experienced, professional service focused on doing the job right the first time.",
+      "Clear, dependable support from initial response through restoration and insurance coordination."
+    ],
+    "button": {
+      "text": "Talk to the Team",
+      "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+    },
+    "kicker": "Our Story",
+    "sitemap_text": "Integrity • Professionalism • Competency • Our Story • Team • Blog • Contact",
+    "deeper_heading": "Why choose Flood QRF?"
+  },
+  "contact_buttons": [
+    {
+      "text": "Request Service",
+      "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+    },
+    {
+      "text": "Email",
+      "url": "mailto:support@floodqrf.com"
+    }
+  ],
+  "brand": {
+    "name": "Flood QRF",
+    "initials": "FQ",
+    "tagline": "Utah's restoration experts",
+    "logo": "/images/logo.png"
+  },
+  "additional_buttons": [
+    {
+      "text": "Ask About Add-ons",
+      "url": "#contact"
+    },
+    {
+      "text": "See Tips & Guides",
+      "url": "/blog/"
+    }
+  ],
+  "team_intro": "Meet the professionals behind Flood QRF—committed to fast response, quality restoration, and dependable service when it matters most.",
+  "services_intro": "The restoration work we do every day — built around speed, safety, and documentation.",
+  "blog_intro": "Insights, tips, and expert guidance on water damage prevention, restoration, and emergency response.",
+  "services_button": {
+    "text": "Check Availability",
+    "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+  },
+  "core_services_secondary": [
+    {
+      "icon": "🦠",
+      "title": "Mold Remediation",
+      "desc": "Containment, HEPA filtration, removal, and prevention guidance."
+    },
+    {
+      "icon": "🧾",
+      "title": "Insurance Claims Assistance",
+      "desc": "Photos, notes, moisture readings, and scopes that help keep the claim moving."
+    }
+  ],
+  "additional_intro": "To keep your project moving, we also handle pre/post work surrounding mitigation and rebuild.",
+  "favicon": "/images/logo.png",
+  "team_button": {
+    "text": "Work with us",
+    "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+  },
+  "blog_posts": [
+    {
+      "meta": "Checklist • 6 min read",
+      "title": "What to do in the first 60 minutes after a leak",
+      "desc": "A calm, step-by-step plan that helps reduce damage and protects your claim.",
+      "href": "/blog/the-first-60-minutes/"
+    },
+    {
+      "meta": "Insurance • 8 min read",
+      "title": "How to document water damage for insurance",
+      "desc": "Photos, moisture readings, and what adjusters typically need to see.",
+      "href": "/blog/insurance-documentation/"
+    },
+    {
+      "meta": "Safety • 5 min read",
+      "title": "Sewage cleanup: what’s safe to keep vs. remove",
+      "desc": "When porous materials must go — and how we handle disposal and sanitation.",
+      "href": "/blog/sewage-safety/"
+    }
+  ],
+  "additional_services": [
+    {
+      "icon": "📦",
+      "title": "Pack-outs (Contents)",
+      "desc": "Inventory, protection, off-site storage coordination, and return."
+    },
+    {
+      "icon": "🧱",
+      "title": "Selective Demolition",
+      "desc": "Controlled removal of affected drywall, flooring, and cabinetry to access wet cavities."
+    },
+    {
+      "icon": "🧼",
+      "title": "Post-construction Cleaning",
+      "desc": "Final clean for dust, debris, and surfaces so the property is move-in ready."
+    }
+  ],
+  "team_members": [
+    {
+      "name": "Lance Gray",
+      "image": "/images/chatgpt-image-mar-31-2026-11_12_31-am.png",
+      "role": "Founder / Response Lead",
+      "meta": "WRT • ASD • OSHA",
+      "quote": "We treat every home like it’s our own — fast, clean, and documented."
+    },
+    {
+      "name": "Aquiles Solis",
+      "image": "/images/headshot_american_flag_1.png",
+      "role": "Lead Technician",
+      "meta": "Containment • Drying • Demo",
+      "quote": "Specializes in complex dry-outs and controlled selective demolition."
+    },
+    {
+      "name": "Ray Hammersley",
+      "image": "/images/headshot_american_flag_2.png",
+      "role": "Water Restoration Technician",
+      "meta": "Containment • Drying • Demo",
+      "quote": "Specializes in complex dry-outs and controlled selective demolition."
+    }
+  ],
+  "process_steps": [
+    {
+      "title": "Emergency call + dispatch",
+      "desc": "We confirm details and mobilize the right equipment."
+    },
+    {
+      "title": "Assessment + moisture map",
+      "desc": "We measure, document, and explain options."
+    },
+    {
+      "title": "Mitigation + drying",
+      "desc": "Extraction, containment, equipment placement, and monitoring."
+    },
+    {
+      "title": "Demo + clean + ready for rebuild",
+      "desc": "Selective demo, pack-outs if needed, and post-construction clean."
+    }
+  ],
+  "title": "Flood QRF",
+  "hero": {
+    "badges": [
+      "Veteran-owned & operated",
+      "IICRC-certified technicians",
+      "Insurance claims support"
+    ],
+    "heading": "24/7 Water Damage Restoration — fast response, clean work, clear communication.",
+    "body": "From emergency water extraction to structural drying and rebuild-ready cleanup. We help you stop damage fast and get back to normal.",
+    "metrics": [
+      {
+        "value": "60 min",
+        "label": "Typical dispatch window"
+      },
+      {
+        "value": "24/7",
+        "label": "Emergency availability"
+      },
+      {
+        "value": "Local",
+        "label": "San Diego County team"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Call Now",
+        "url": "tel:8882204681"
+      },
+      {
+        "text": "Get a Free Assessment",
+        "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+      }
+    ],
+    "quickCard": {
+      "kicker": "Emergency? We can help.",
+      "heading": "Request Service",
+      "note": "Use this as a simple inquiry form — or replace with a Jobber embed/button.",
+      "buttons": [
+        {
+          "text": "Open Jobber",
+          "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+        },
+        {
+          "text": "Call",
+          "url": "tel:8882204681"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "license": "012545",
+    "phone": "(888) 220-4681",
+    "tagline": "Utah's water restoration experts.",
+    "instagram": "https://instagram.com/floodqrf",
+    "jobber": "https://jobber.page.link/YourJobberLinkHere",
+    "note": "",
+    "address": "1116 W 500 South<br/>Suite #10<br/>Bountiful, UT 84087",
+    "x": "https://x.com/floodqrf",
+    "email": "support@floodqrf.com",
+    "company": "Flood QRF Inc."
+  },
+  "process_intro": "We keep things simple: assess, document, mitigate, and leave the site rebuild-ready.",
+  "alert": {
+    "badge": "24/7",
+    "text": "Emergency water & sewage response"
+  },
+  "map": "https://www.google.com/maps?q=1116+W+500+S,+West+Bountiful,+UT+84087&output=embed",
+  "nav_links": [
+    {
+      "label": "Services",
+      "url": "/#services"
+    },
+    {
+      "label": "Additional Services",
+      "url": "/#additional"
+    },
+    {
+      "label": "Our Story",
+      "url": "/#story"
+    },
+    {
+      "label": "Team",
+      "url": "/#team"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "label": "Contact",
+      "url": "/#contact"
+    }
+  ]
+}
