@@ -49,6 +49,14 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string", hint: "Use /#section for page sections, /path/ for other pages, or a full URL" }
 
+          - label: "Header Button"
+            name: "header_button"
+            widget: "object"
+            hint: "The call-to-action button shown in the site header (top-right corner)"
+            fields:
+              - { label: "Button Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Use tel:XXXXXXXXXX for phone, a Jobber URL for webform, #contact for section link, or any URL" }
+
           - label: "Alert Bar"
             name: "alert"
             widget: "object"
@@ -221,8 +229,11 @@ collections:
             widget: "object"
             fields:
               - { label: "Hours", name: "hours", widget: "string" }
+              - { label: "Section Note", name: "note", widget: "string", required: false, hint: "Short note shown below the Contact heading" }
+              - { label: "Phone Note", name: "phone_note", widget: "string", required: false, hint: "Helper text shown below the phone number" }
 
           - { label: "Map Embed URL", name: "map", widget: "string" }
+          - { label: "Map Note", name: "map_note", widget: "string", required: false, hint: "Small note shown below the map embed" }
 
           - label: "Footer"
             name: "footer"
