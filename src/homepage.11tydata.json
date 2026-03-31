@@ -36,24 +36,24 @@
   ],
   "meta_description": "San Diego County's trusted water restoration experts — Flood QRF. Fast, veteran-owned response for water damage, sewage, and emergencies.",
   "our_story": {
-    "kicker": "Our Story",
-    "heading": "Why we built Flood QRF",
-    "body": "Restoration is stressful — the best companies reduce chaos. We’re a veteran-owned team that shows up quickly, communicates clearly, and documents everything so you can make decisions with confidence.",
-    "mission": "Minimize loss and return safe living conditions fast.",
     "values": "Integrity, readiness, and meticulous work.",
-    "button": {
-      "text": "Talk to the Team",
-      "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
-    },
-    "deeper_heading": "What makes this site deeper",
-    "sitemap_title": "Suggested Sitemap",
-    "sitemap_text": "Home • Services • Additional Services • Our Story • Team • Blog • Contact",
+    "body": "Restoration is stressful — the best companies reduce chaos. We’re a veteran-owned team that shows up quickly, communicates clearly, and documents everything so you can make decisions with confidence.",
+    "heading": "Why we built Flood QRF",
+    "mission": "Minimize loss and return safe living conditions fast.",
+    "sitemap_title": "Key differentiators ",
     "bullets": [
       "24/7 emergency response when water damage cannot wait.",
       "Fast mitigation and drying to help prevent further property damage.",
       "Experienced, professional service focused on doing the job right the first time.",
       "Clear, dependable support from initial response through restoration and insurance coordination."
-    ]
+    ],
+    "button": {
+      "text": "Talk to the Team",
+      "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
+    },
+    "kicker": "Our Story",
+    "sitemap_text": "Integrity • Professionalism • Competency • Our Story • Team • Blog • Contact",
+    "deeper_heading": "Why choose Flood QRF?"
   },
   "contact_buttons": [
     {
@@ -250,7 +250,7 @@
     "badge": "24/7",
     "text": "Emergency water & sewage response across the Greater Salt Lake area"
   },
-  "map": "https://www.google.com/maps?q=123+Scripps+Ranch+Blvd,+San+Diego,+CA+92131&output=embed",
+  "map": "https://www.google.com/maps?q=1116+W+500+S,+West+Bountiful,+UT+84087&output=embed",
   "nav_links": [
     {
       "label": "Services",
