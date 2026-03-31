@@ -49,10 +49,10 @@
     "sitemap_title": "Suggested Sitemap",
     "sitemap_text": "Home • Services • Additional Services • Our Story • Team • Blog • Contact",
     "bullets": [
-      "Story-led modules that increase trust and time on page.",
-      "Team section with real faces and certifications.",
-      "Blog previews for SEO (insurance tips, emergency checklists, etc.).",
-      "Additional Services showcased clearly (pack-outs, demo, post-clean)."
+      "24/7 emergency response when water damage cannot wait.",
+      "Fast mitigation and drying to help prevent further property damage.",
+      "Experienced, professional service focused on doing the job right the first time.",
+      "Clear, dependable support from initial response through restoration and insurance coordination."
     ]
   },
   "contact_buttons": [
@@ -81,9 +81,9 @@
       "url": "/blog/"
     }
   ],
-  "team_intro": "Use real names/photos later — here are mock cards showing the layout.",
+  "team_intro": "Meet the professionals behind Flood QRF—committed to fast response, quality restoration, and dependable service when it matters most.",
   "services_intro": "The restoration work we do every day — built around speed, safety, and documentation.",
-  "blog_intro": "A lightweight blog gives you consistent SEO growth and content to share with customers.",
+  "blog_intro": "Insights, tips, and expert guidance on water damage prevention, restoration, and emergency response.",
   "services_button": {
     "text": "Check Availability",
     "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
@@ -145,8 +145,8 @@
   ],
   "team_members": [
     {
-      "name": "",
-      "image": "",
+      "name": "Lance Gray",
+      "image": "/images/chatgpt-image-mar-31-2026-11_12_31-am.png",
       "role": "Founder / Response Lead",
       "meta": "WRT • ASD • OSHA",
       "quote": "We treat every home like it’s our own — fast, clean, and documented."
@@ -239,9 +239,8 @@
     "tagline": "Utah's water restoration experts.",
     "instagram": "https://instagram.com/floodqrf",
     "jobber": "https://jobber.page.link/YourJobberLinkHere",
-    "note": "Mockup Option A • Single-page home with deeper sections + blog module",
-    "address": "123 Scripps Ranch Blvd<br/>San Diego, CA 92131",
-    "map_link": "https://www.google.com/maps/search/?api=1&query=123+Scripps+Ranch+Blvd%2C+San+Diego%2C+CA+92131",
+    "note": "",
+    "address": "1116 W 500 South<br/>Suite #10<br/>Bountiful, UT 84087",
     "x": "https://x.com/floodqrf",
     "email": "support@floodqrf.com",
     "company": "Flood QRF Inc."
