@@ -34,4 +34,15 @@ module.exports = {
       return d.toISOString().split("T")[0];
     }
   },
+
+  mapSearchUrl(address) {
+    if (!address) return "";
+    const plain = String(address)
+      .replace(/<br\s*\/?>/gi, " ")
+      .replace(/&nbsp;/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!plain) return "";
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(plain)}`;
+  },
 };
