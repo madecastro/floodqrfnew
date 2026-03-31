@@ -47,6 +47,9 @@
 {% set activeNavLinks = nav_links or sharedNavLinks %}
 {% set activeFooter = footer or sharedFooter %}
 {% set activeAlert = alert or sharedAlert %}
+{% set headerButton = header_button or {} %}
+{% set headerButtonText = headerButton.text or 'Request Service' %}
+{% set headerButtonUrl = headerButton.url or jobber %}
 {% set addressText = activeFooter.address or site.address %}
 {% set footerMapLink = activeFooter.map_link or helpers.mapSearchUrl(addressText) %}
 
@@ -86,7 +89,7 @@
 
       <div class="flex items-center gap-2">
         <a href="tel:{{ phoneDigits }}" class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg border font-semibold hover:bg-gray-50">Call</a>
-        <a href="{{ jobber }}" class="inline-flex items-center px-4 py-2 rounded-lg bg-navy2 text-white font-extrabold hover:opacity-95 shadow-soft">Request Service</a>
+        <a href="{{ headerButtonUrl }}" class="inline-flex items-center px-4 py-2 rounded-lg bg-navy2 text-white font-extrabold hover:opacity-95 shadow-soft">{{ headerButtonText }}</a>
       </div>
     </div>
   </header>
