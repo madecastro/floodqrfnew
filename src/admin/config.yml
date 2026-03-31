@@ -171,7 +171,11 @@ collections:
               - label: "Bullets"
                 name: "bullets"
                 widget: "list"
+                label_singular: "Deeper Element"
                 field: { label: "Bullet", name: "bullet", widget: "string" }
+              - { label: "Deeper Section Heading", name: "deeper_heading", widget: "string", required: false, hint: "Heading shown above the deeper elements list" }
+              - { label: "Suggested Sitemap Title", name: "sitemap_title", widget: "string", required: false }
+              - { label: "Suggested Sitemap Text", name: "sitemap_text", widget: "text", required: false, hint: "Example: Home • Services • Additional Services • Our Story • Team • Blog • Contact" }
 
           - label: "Team Button"
             name: "team_button"
@@ -227,6 +231,7 @@ collections:
               - { label: "Company Name", name: "company", widget: "string" }
               - { label: "Tagline", name: "tagline", widget: "string" }
               - { label: "Address (HTML)", name: "address", widget: "string" }
+              - { label: "Google Maps Link", name: "map_link", widget: "string", required: false, hint: "Public URL to this address on Google Maps" }
               - { label: "Phone", name: "phone", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
               - { label: "License Number", name: "license", widget: "string", required: false }

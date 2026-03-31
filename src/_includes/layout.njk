@@ -32,11 +32,20 @@
   </style>
 </head>
 
-{% set phone = (footer.phone or site.phone or "(949) 324-3565") %}
+{% set sharedBrand = shared.brand or {} %}
+{% set sharedAlert = shared.alert or {} %}
+{% set sharedFooter = shared.footer or {} %}
+{% set sharedNavLinks = shared.nav_links or [] %}
+{% set phone = (footer.phone or sharedFooter.phone or site.phone or "(949) 324-3565") %}
 {% set phoneDigits = phone | replace('(','') | replace(')','') | replace(' ','') | replace('-', '') %}
-{% set jobber = footer.jobber or site.jobber_url or "https://jobber.page.link/YourJobberLinkHere" %}
-{% set brandName = (brand.name or site.name or "Flood QRF") %}
-{% set brandTagline = (brand.tagline or site.tagline or "San Diego County’s restoration experts") %}
+{% set jobber = footer.jobber or sharedFooter.jobber or site.jobber_url or "https://jobber.page.link/YourJobberLinkHere" %}
+{% set brandName = (brand.name or sharedBrand.name or site.name or "Flood QRF") %}
+{% set brandTagline = (brand.tagline or sharedBrand.tagline or site.tagline or "San Diego County’s restoration experts") %}
+{% set activeNavLinks = nav_links or sharedNavLinks %}
+{% set activeFooter = footer or sharedFooter %}
+{% set activeAlert = alert or sharedAlert %}
+{% set addressText = activeFooter.address or site.address %}
+{% set footerMapLink = activeFooter.map_link or helpers.mapSearchUrl(addressText) %}
 
 <body class="bg-white text-gray-900">
 
@@ -44,8 +53,8 @@
   <div class="bg-navy text-white text-sm">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-white bg-opacity-15">{{ alert.badge or '24/7' }}</span>
-        <span>{{ alert.text or 'Emergency water & sewage response across San Diego County' }}</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-white bg-opacity-15">{{ activeAlert.badge or '24/7' }}</span>
+        <span>{{ activeAlert.text or 'Emergency water & sewage response across San Diego County' }}</span>
       </div>
       <a class="font-semibold underline" href="tel:{{ phoneDigits }}">Call {{ phone }}</a>
     </div>
@@ -55,10 +64,10 @@
   <header class="sticky top-0 z-50 bg-white border-b">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3">
-        {% if brand.logo %}
-        <img src="{{ brand.logo }}" alt="{{ brandName }}" class="h-10 w-10 rounded-lg object-cover" />
+        {% if brand.logo or sharedBrand.logo %}
+        <img src="{{ brand.logo or sharedBrand.logo }}" alt="{{ brandName }}" class="h-10 w-10 rounded-lg object-cover" />
         {% else %}
-        <div class="h-10 w-10 rounded-lg bg-navy2 flex items-center justify-center text-white font-extrabold">{{ brand.initials or 'FQ' }}</div>
+        <div class="h-10 w-10 rounded-lg bg-navy2 flex items-center justify-center text-white font-extrabold">{{ brand.initials or sharedBrand.initials or 'FQ' }}</div>
         {% endif %}
         <div class="leading-tight">
           <div class="font-extrabold text-lg">{{ brandName }}</div>
@@ -67,7 +76,7 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
-        {% for link in nav_links %}
+        {% for link in activeNavLinks %}
         <a href="{{ link.url }}" class="hover:text-red">{{ link.label }}</a>
         {% endfor %}
       </nav>
@@ -88,10 +97,10 @@
     <div class="max-w-7xl mx-auto px-4 py-10">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <div class="font-extrabold text-lg">{{ footer.company or 'Flood QRF Inc.' }}</div>
-          <div class="text-sm text-gray-200 mt-2">{{ footer.tagline or "San Diego County’s water restoration experts." }}</div>
-          {% if footer.license %}
-          <div class="text-sm text-gray-200 mt-3">License #{{ footer.license }}</div>
+          <div class="font-extrabold text-lg">{{ activeFooter.company or 'Flood QRF Inc.' }}</div>
+          <div class="text-sm text-gray-200 mt-2">{{ activeFooter.tagline or "San Diego County’s water restoration experts." }}</div>
+          {% if activeFooter.license %}
+          <div class="text-sm text-gray-200 mt-3">License #{{ activeFooter.license }}</div>
           {% endif %}
         </div>
         <div>
@@ -107,23 +116,29 @@
           <div class="font-extrabold">Contact</div>
           <ul class="mt-3 space-y-2 text-sm text-gray-200">
             <li><a class="hover:underline" href="tel:{{ phoneDigits }}">{{ phone }}</a></li>
-            <li><a class="hover:underline" href="mailto:{{ footer.email or 'support@floodqrf.com' }}">{{ footer.email or 'support@floodqrf.com' }}</a></li>
-            {% if footer.address %}
-            <li class="leading-snug">{{ footer.address | safe }}</li>
+            <li><a class="hover:underline" href="mailto:{{ activeFooter.email or 'support@floodqrf.com' }}">{{ activeFooter.email or 'support@floodqrf.com' }}</a></li>
+            {% if addressText %}
+            <li class="leading-snug">
+              {% if footerMapLink %}
+              <a class="hover:underline" href="{{ footerMapLink }}" target="_blank" rel="noopener noreferrer">{{ addressText | safe }}</a>
+              {% else %}
+              {{ addressText | safe }}
+              {% endif %}
+            </li>
             {% endif %}
           </ul>
         </div>
         <div>
           <div class="font-extrabold">Social</div>
           <ul class="mt-3 space-y-2 text-sm text-gray-200">
-            {% if footer.instagram %}<li><a class="hover:underline" href="{{ footer.instagram }}">Instagram</a></li>{% endif %}
-            {% if footer.x %}<li><a class="hover:underline" href="{{ footer.x }}">X</a></li>{% endif %}
+            {% if activeFooter.instagram %}<li><a class="hover:underline" href="{{ activeFooter.instagram }}">Instagram</a></li>{% endif %}
+            {% if activeFooter.x %}<li><a class="hover:underline" href="{{ activeFooter.x }}">X</a></li>{% endif %}
           </ul>
         </div>
       </div>
       <div class="mt-10 pt-6 border-t border-white border-opacity-10 text-xs text-gray-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
-        <div>© <span id="siteYear"></span> {{ footer.company or 'Flood QRF Inc.' }}. All rights reserved.</div>
-        <div>{{ footer.note or 'Option A • Trust + Depth' }}</div>
+        <div>© <span id="siteYear"></span> {{ activeFooter.company or 'Flood QRF Inc.' }}. All rights reserved.</div>
+        <div>{{ activeFooter.note or 'Option A • Trust + Depth' }}</div>
       </div>
     </div>
     <script>

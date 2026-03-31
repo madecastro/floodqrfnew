@@ -45,6 +45,9 @@
       "text": "Talk to the Team",
       "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2491481/new"
     },
+    "deeper_heading": "What makes this site deeper",
+    "sitemap_title": "Suggested Sitemap",
+    "sitemap_text": "Home • Services • Additional Services • Our Story • Team • Blog • Contact",
     "bullets": [
       "Story-led modules that increase trust and time on page.",
       "Team section with real faces and certifications.",
@@ -238,6 +241,7 @@
     "jobber": "https://jobber.page.link/YourJobberLinkHere",
     "note": "Mockup Option A • Single-page home with deeper sections + blog module",
     "address": "123 Scripps Ranch Blvd<br/>San Diego, CA 92131",
+    "map_link": "https://www.google.com/maps/search/?api=1&query=123+Scripps+Ranch+Blvd%2C+San+Diego%2C+CA+92131",
     "x": "https://x.com/floodqrf",
     "email": "support@floodqrf.com",
     "company": "Flood QRF Inc."
@@ -247,7 +251,7 @@
     "badge": "24/7",
     "text": "Emergency water & sewage response across the Greater Salt Lake area"
   },
-  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106142.2493!2d-117.2002!3d32.7157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954afc9fbaafd%3A0x8e0b0d3e9fd73502!2sSan+Diego%2C+CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus",
+  "map": "https://www.google.com/maps?q=123+Scripps+Ranch+Blvd,+San+Diego,+CA+92131&output=embed",
   "nav_links": [
     {
       "label": "Services",
