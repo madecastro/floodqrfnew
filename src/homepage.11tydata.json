@@ -1,6 +1,8 @@
 {
   "contact": {
-    "hours": "Emergency response 24/7 • Office: Mon–Fri 8am–5pm"
+    "hours": "Emergency response 24/7 • Office: Mon–Fri 8am–5pm",
+    "note": "We serve our listed service area. For emergencies, calling is the fastest.",
+    "phone_note": "Or tap \"Request Service\" to open Jobber scheduling."
   },
   "core_services_primary": [
     {
@@ -74,6 +76,10 @@
     "initials": "FQ",
     "tagline": "Utah's restoration experts",
     "logo": "/images/logo.png"
+  },
+  "header_button": {
+    "text": "Request Service",
+    "url": "https://clienthub.getjobber.com/hubs/8f535550-167e-46db-a1fc-008e3ca0349f/public/requests/2725151/new"
   },
   "additional_buttons": [
     {
@@ -255,6 +261,7 @@
     "text": "Emergency water & sewage response"
   },
   "map": "https://www.google.com/maps?q=1116+W+500+S,+West+Bountiful,+UT+84087&output=embed",
+  "map_note": "Map embed can be updated to your exact service area or office address.",
   "nav_links": [
     {
       "label": "Services",

@@ -286,12 +286,12 @@ permalink: /
     <div class="grid md:grid-cols-2 gap-10">
       <div>
         <h2 class="text-3xl md:text-4xl font-extrabold">Service Area + Contact</h2>
-        <p class="text-gray-600 mt-2">We serve our listed service area. For emergencies, calling is the fastest.</p>
+        <p class="text-gray-600 mt-2">{{ contact.note or 'We serve our listed service area. For emergencies, calling is the fastest.' }}</p>
         <div class="mt-6 space-y-3">
           <div class="rounded-2xl border p-5">
             <div class="text-xs text-gray-500">24/7 Emergency Line</div>
             <a class="text-2xl font-extrabold text-navy" href="tel:{{ phoneDigits }}">{{ phone }}</a>
-            <div class="text-sm text-gray-600 mt-1">Or tap “Request Service” to open Jobber scheduling.</div>
+            <div class=”text-sm text-gray-600 mt-1”>{{ contact.phone_note or 'Or tap “Request Service” to open Jobber scheduling.' }}</div>
             <div class="mt-4 flex gap-3">
               {% for btn in contact_buttons %}
               <a class="inline-flex items-center justify-center px-5 py-3 rounded-lg {{ 'bg-navy2 text-white font-extrabold' if loop.first else 'border font-extrabold' }}" href="{{ btn.url }}">{{ btn.text }}</a>
@@ -313,7 +313,7 @@ permalink: /
           loading="lazy"
           allowfullscreen
         ></iframe>
-        <div class="p-4 bg-white text-sm text-gray-600">Map embed can be updated to your exact service area or office address.</div>
+        <div class="p-4 bg-white text-sm text-gray-600">{{ map_note or 'Map embed can be updated to your exact service area or office address.' }}</div>
       </div>
 
     </div>
